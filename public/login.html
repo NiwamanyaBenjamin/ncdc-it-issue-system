@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NCDC IT Issue Resolution Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="clean-login-body">
+  <main class="clean-auth-wrap">
+    <section class="clean-login-card" id="loginBox">
+      <img src="assets/ncdc-logo.png" alt="NCDC Logo" class="ncdc-login-logo">
+      <h1>IT ISSUE RESOLUTION MANAGEMENT SYSTEM</h1>
+      <p class="login-subtitle">National Curriculum Development Centre</p>
+      <form id="loginForm" class="clean-login-form">
+        <label>Email Address</label>
+        <input id="email" type="email" placeholder="Enter your email address" required>
+        <label>Password</label>
+        <div class="password-wrapper">
+          <input id="password" type="password" placeholder="Enter your password" required>
+          <button type="button" class="password-toggle" data-toggle-password="password">Show</button>
+        </div>
+        <button class="clean-login-btn">LOGIN</button>
+      </form>
+      <div id="msg" class="auth-message"></div>
+      <div class="clean-auth-links">
+        <button type="button" id="showForgot">Forgot password?</button>
+        <span>|</span>
+        <button type="button" id="showRegister">Register</button>
+      </div>
+    </section>
+
+    <section class="clean-login-card hidden register-card" id="registerBox">
+      <img src="assets/ncdc-logo.png" alt="NCDC Logo" class="ncdc-login-logo small-logo">
+      <h1>REGISTER ACCOUNT</h1>
+      <p class="login-subtitle">Create your account for system access.</p>
+      <form id="registerForm" class="clean-login-form">
+        <input name="name" placeholder="Full name" required>
+        <input name="email" type="email" placeholder="Email address" required>
+        <div class="password-wrapper">
+          <input id="registerPassword" name="password" type="password" placeholder="Create password" required>
+          <button type="button" class="password-toggle" data-toggle-password="registerPassword">Show</button>
+        </div>
+        <input name="department" placeholder="Department">
+        <input name="staff_number" placeholder="Staff number if available">
+        <input name="phone" placeholder="Phone contact">
+        <button class="clean-login-btn">SUBMIT REGISTRATION</button>
+      </form>
+      <div id="regMsg" class="auth-message"></div>
+      <div class="clean-auth-links"><button type="button" id="showLogin">Back to login</button></div>
+    </section>
+
+    <section class="clean-login-card hidden" id="forgotBox">
+      <img src="assets/ncdc-logo.png" alt="NCDC Logo" class="ncdc-login-logo small-logo">
+      <h1>FORGOT PASSWORD</h1>
+      <p class="login-subtitle">Enter your email address to continue.</p>
+      <form id="forgotForm" class="clean-login-form">
+        <input name="email" type="email" placeholder="Your approved email address" required>
+        <button class="clean-login-btn">REQUEST RESET CODE</button>
+      </form>
+      <form id="resetForm" class="clean-login-form reset-form">
+        <input name="email" type="email" placeholder="Email address" required>
+        <input name="reset_code" placeholder="Reset code" required>
+        <div class="password-wrapper">
+          <input id="resetPassword" name="new_password" type="password" placeholder="New password" required>
+          <button type="button" class="password-toggle" data-toggle-password="resetPassword">Show</button>
+        </div>
+        <button class="clean-login-btn">RESET PASSWORD</button>
+      </form>
+      <div id="forgotMsg" class="auth-message"></div>
+      <div class="clean-auth-links"><button type="button" id="forgotBack">Back to login</button></div>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>
