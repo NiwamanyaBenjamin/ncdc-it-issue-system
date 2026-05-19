@@ -120,12 +120,13 @@ async function init(){
     details TEXT DEFAULT '',
     created_at TIMESTAMPTZ DEFAULT NOW()
   )`);
-  const demo = [
-    ['System Admin','admin@ncdc.local','Admin@123','admin','ICT Administration','ADM-001','0700000001'],
-    ['IT Manager','manager@ncdc.local','Manager@123','manager','ICT Management','MGT-001','0700000002'],
-    ['IT Staff One','staff@ncdc.local','Staff@123','it_staff','ICT Support','IT-001','0700000003'],
-    ['NCDC User','user@ncdc.local','User@123','user','Curriculum','USR-001','0700000004']
-  ];
+ const demo = [
+  ['NIWAMANYA BENJAMIN','niwamanyabenjamin023@gmail.com','Maggie@56','admin','ICT Administration','ADM-001','0702686882'],
+  ['KIKULWE JOHN','kjohncyrus@gmail.com','john253313','manager','Management','MGT-001','0755659039'],
+  ['CHEMUTAI FLORENCE','chemutaiflo28@gmail.com','florence28','it_staff','ICT Support','IT-001','076062937'],
+  ['BUGODYO JOEL','bugodyojoel531@gmail.com','joel531','it_staff','Network Support','IT-002','0763999562'],
+  ['CHEMTAI PATIENCE','chemtaipatience@gmail.com','patience@','user','Curriculum','USR-001','0783721086']
+];
   for(const d of demo){
     const exists = await one('SELECT id FROM users WHERE email=$1', [d[1]]);
     const hash = await bcrypt.hash(d[2], 10);
