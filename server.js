@@ -138,7 +138,7 @@ async function init(){
 }
 
 app.get('/health', (req,res)=>res.json({status:'ok', system:'NCDC IT Issue Resolution Management System'}));
-app.get('/', (req,res)=>res.sendFile(path.join(__dirname,'public','index.html')));
+app.get('/', (req,res)=>res.sendFile(path.join(__dirname,'public','login.html')));
 
 app.post('/api/login', async (req,res)=>{
   const {email,password}=req.body;
