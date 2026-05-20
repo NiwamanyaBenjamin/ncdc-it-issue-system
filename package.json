@@ -1,7 +1,7 @@
 {
   "name": "ncdc-it-issue-resolution-system",
-  "version": "1.0.0",
-  "description": "NCDC IT Issue Resolution Management System - Group 17",
+  "version": "5.0.0",
+  "description": "NCDC IT Issue Resolution Management System with PostgreSQL",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,12 +12,10 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "connect-pg-simple": "^9.0.1",
+    "connect-pg-simple": "^10.0.0",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
+    "express": "^4.19.2",
     "express-session": "^1.18.1",
-    "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.9.16",
     "pg": "^8.13.1"
   }
 }
